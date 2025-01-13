@@ -3,9 +3,9 @@ package com.norman.webviewup.lib.source;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
 
 import com.norman.webviewup.lib.util.ApksUtils;
 import com.norman.webviewup.lib.util.FileUtils;

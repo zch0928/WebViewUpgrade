@@ -1,8 +1,7 @@
 package com.norman.webviewup.lib.reflect;
 
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
-
-import androidx.annotation.NonNull;
 
 import com.norman.webviewup.lib.reflect.annotation.ClassName;
 import com.norman.webviewup.lib.reflect.annotation.ClassType;

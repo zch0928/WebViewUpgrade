@@ -12,7 +12,7 @@ import android.os.IInterface;
 import android.os.RemoteException;
 import android.text.TextUtils;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import com.norman.webviewup.lib.reflect.RuntimeAccess;
 import com.norman.webviewup.lib.service.binder.BinderHook;
@@ -87,7 +87,10 @@ public class PackageManagerServiceHook extends BinderHook {
                     throw new RuntimeException("apkPath is not valid  " + apkPath);
                 }
                 boolean is64Bit = ProcessUtils.is64Bit();
-                String[] supportBitAbis = is64Bit ? Build.SUPPORTED_64_BIT_ABIS : Build.SUPPORTED_32_BIT_ABIS;
+                String[] supportBitAbis = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                    supportBitAbis = is64Bit ? Build.SUPPORTED_64_BIT_ABIS : Build.SUPPORTED_32_BIT_ABIS;
+                }
                 Arrays.sort(supportBitAbis, Collections.reverseOrder());
                 String nativeLibraryDir = null;
 

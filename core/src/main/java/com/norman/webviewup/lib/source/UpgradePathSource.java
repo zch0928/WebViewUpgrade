@@ -3,7 +3,7 @@ package com.norman.webviewup.lib.source;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import com.norman.webviewup.lib.util.ApksUtils;
 import com.norman.webviewup.lib.util.FileUtils;

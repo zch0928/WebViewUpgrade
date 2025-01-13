@@ -56,11 +56,7 @@ public class WebViewUpdateServiceHook extends BinderHook {
             parcel.setDataPosition(parcel.dataSize()-4);
             parcel.writeInt(0);
             parcel.setDataPosition(0);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                result = parcel.readParcelable(result.getClass().getClassLoader(), result.getClass());
-            } else {
-                result = parcel.readParcelable(result.getClass().getClassLoader());
-            }
+            result = parcel.readParcelable(result.getClass().getClassLoader());
             parcel.recycle();
 
             return result;

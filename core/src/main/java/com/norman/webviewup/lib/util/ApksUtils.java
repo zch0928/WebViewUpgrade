@@ -1,6 +1,7 @@
 package com.norman.webviewup.lib.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,6 +43,7 @@ public class ApksUtils {
                 FileUtils.copyFile(zipFile.getInputStream(zipEntry), targetFile, true);
             }
         } catch (IOException ioException) {
+            Log.e("ApksUtils", "extractNativeLibrary catch");
             FileUtils.cleanDirectory(libsDir);
             throw new RuntimeException(ioException);
         } finally {
@@ -52,6 +54,7 @@ public class ApksUtils {
 
                 }
             }
+            Log.i("ApksUtils", "extractNativeLibrary finally");
         }
     }
 }

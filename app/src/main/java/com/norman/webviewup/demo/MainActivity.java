@@ -1,20 +1,17 @@
 package com.norman.webviewup.demo;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 
 import com.norman.webviewup.lib.UpgradeCallback;
 import com.norman.webviewup.lib.WebViewUpgrade;
